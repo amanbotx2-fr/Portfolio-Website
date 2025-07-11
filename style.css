@@ -1,0 +1,215 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: transparent; /* so the animated shapes show behind */
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li a:hover {
+  color: #888;
+  font-size: 1.04rem;
+}
+
+.left {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  position: relative;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #aaaaaa 0px,
+    #cccbcb 144px,
+    gray 144px,
+    gray 288px,
+    #bebebe 288px,
+    #bebebe 432px
+  );
+  background-size: 250%;
+  background-position: 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-animation: stripeAnimation 3s linear infinite;
+  animation: stripeAnimation 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.left:hover {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+@keyframes stripeAnimation {
+  100% {
+    background-position: 165%;
+  }
+}
+
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 120px 0;
+}
+
+.firstSection > div {
+  width: 30%;
+}
+
+.leftSection {
+  font-size: 3rem;
+  margin: 70px 0;
+}
+
+.purple {
+  color: darkgrey;
+}
+
+#element {
+  color: darkgrey;
+}
+
+
+.aboutSection {
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px;
+  background: transparent;
+}
+
+.aboutSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.aboutSection p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* .aboutContent {
+  width: 50%;
+  padding: 50px;
+  margin: 20px 20px;
+} */
+
+
+
+.Aboutcard {
+  width: 17em;
+  height: 22.5em;
+  background: rgb(41, 40, 40);
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Aboutcard span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.Aboutcard .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+}
+
+.Aboutcard .Aboutimg {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.Aboutcard .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.Aboutcard a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.Aboutcard a:hover {
+  color: rgb(80, 80, 80);
+}
+
+.Aboutcard button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.Aboutcard button:hover {
+  background: rgb(80, 80, 80);
+  color: white;
+  cursor: pointer;
+}
+
+.Aboutcard .Aboutimg {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+  overflow: hidden; /* Hide overflow to keep image inside rounded corners */
+}
+
+.Aboutcard .Aboutimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image fill the box and crop if needed */
+  object-position: center; /* Keeps the focus centered */
+  display: block; /* Removes unwanted gaps */
+}

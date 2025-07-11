@@ -1,0 +1,124 @@
+#background-wrapper {
+  position: fixed; /* covers whole page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* always behind everything */
+}
+
+#animated-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#animated-bg li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.2); /* fallback */
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+  border-radius: 50%; /* shapes are circles */
+}
+
+/* Each shape gets its own size, color & timing */
+#animated-bg li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  background: #ffadad;
+  animation-delay: 0s;
+}
+
+#animated-bg li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  background: #ffd6a5;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+#animated-bg li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  background: #fdffb6;
+  animation-delay: 4s;
+}
+
+#animated-bg li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  background: #caffbf;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+#animated-bg li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  background: #9bf6ff;
+  animation-delay: 0s;
+}
+
+#animated-bg li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  background: #a0c4ff;
+  animation-delay: 3s;
+}
+
+#animated-bg li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  background: #bdb2ff;
+  animation-delay: 7s;
+}
+
+#animated-bg li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  background: #ffc6ff;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+#animated-bg li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  background: #fffffc;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+#animated-bg li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  background: #f1f1f1;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
